@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Say Hi!</string>
+    <string-array name="langs" >
+
+        <item>English UK</item>
+        <item>Japanese</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Chinese</item>
+        <item>German</item>
+    </string-array>
+
+</resources>
