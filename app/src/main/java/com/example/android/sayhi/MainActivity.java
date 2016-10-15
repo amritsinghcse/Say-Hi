@@ -2,6 +2,7 @@ package com.example.android.sayhi;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
                 tts.setLanguage(locale);
 
-                tts.speak(  string, TextToSpeech.QUEUE_FLUSH,null);
+                new MoveToBackGround().execute();
 
 
 
@@ -180,6 +181,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private class MoveToBackGround extends AsyncTask<Void, Void, Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            tts.speak(  string, TextToSpeech.QUEUE_FLUSH,null);
+            return null;
+        }
     }
 }
 
