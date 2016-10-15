@@ -12,7 +12,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="100dp"
+        android:elevation="32dp">
 
         <EditText
             android:id="@+id/text"
@@ -25,6 +26,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="20dp"
             android:width="350dp"
+            android:elevation="8dp"
             android:fontFamily="monospace"
             android:hint="@string/type_here" />
 
@@ -63,6 +65,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="70dp"
             android:background="#abe5e4"
+            android:elevation="12dp"
             android:fontFamily="monospace"
             android:text="@string/say_it" />
 

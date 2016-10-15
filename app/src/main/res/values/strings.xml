@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Say Hi!</string>
+    <string name="write_it_up_nand_don_t_forget_to_give_feedback_and_report_bugs">Write it up!\nAnd don\'t forget to give feedback and report bugs</string>
+    <string name="type_here">Type Here</string>
+    <string name="say_it">Say it!</string>
     <string-array name="langs" >
 
         <item>English UK</item>
