@@ -1,22 +1,28 @@
 package com.example.android.sayhi;
 
+import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import java.util.Locale;
 
@@ -25,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
 
     Toast toast;
     String choice,string;
-    Spinner spinner;
+    MaterialBetterSpinner spinner;
     TextToSpeech tts;
     Locale locale ;
     Context context;
     CharSequence mess;
     int duration;
-
+    private View myView;
 
 
     @Override
@@ -39,11 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),R.array.langs, android.R.layout.simple_spinner_item);
+        myView = findViewById(R.id.revealiew);
+        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),R.array.langs,
+                R.layout.spinner_row);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner = (Spinner) findViewById(R.id.spinner);
-        
+        spinner = (MaterialBetterSpinner)
+                findViewById(R.id.spinner);
         spinner.setAdapter(adapter);
         Button button  = (Button) findViewById(R.id.button);
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -106,8 +113,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
+
+                // previously invisible view
+
+
+                // get the center for the clipping circle
+                int cx = myView.getWidth() / 2;
+                int cy = myView.getHeight() / 2;
+
+                // get the final radius for the clipping circle
+                int finalRadius = Math.max(myView.getWidth(), myView.getHeight());
+
+                // create the animator for this view (the start radius is zero)
+                Animator anim =
+                        ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
+
+                //Interpolator for giving effect to animation
+                anim.setInterpolator(new AccelerateDecelerateInterpolator());
+                // Duration of the animation
+                anim.setDuration(500);
+
+                    // make the view visible and start the animation
+                myView.setVisibility(View.VISIBLE);
+                anim.start();
+
+
                 EditText edit = (EditText) findViewById(R.id.text);
                 TextView text = (TextView) findViewById(R.id.textView);
                 string = edit.getText().toString();
@@ -117,9 +150,6 @@ public class MainActivity extends AppCompatActivity {
                 tts.setLanguage(locale);
 
                 new MoveToBackGround().execute();
-
-
-
 
             }
         });
@@ -188,8 +218,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             tts.speak(  string, TextToSpeech.QUEUE_FLUSH,null);
+
             return null;
         }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+
+        }
+    }
+    public void removeRipple(View view){
+        //making it gone
+        myView.setVisibility(View.GONE);
     }
 }
 
