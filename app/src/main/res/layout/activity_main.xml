@@ -2,7 +2,8 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+>
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,16 +31,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp" />
 
+        <com.andexert.library.RippleView
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+
+            >
 
         <Button
-            android:id="@+id/button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="38dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:fontFamily="monospace"
-            android:text="Say it!" />
+            android:text="Say it!"
+            android:background="@android:color/holo_red_dark"
+            android:textColor="#fff"
+            />
+
+        </com.andexert.library.RippleView>
 
         <TextView
             android:id="@+id/textView"

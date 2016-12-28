@@ -12,11 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.andexert.library.RippleView;
 
 import java.util.Locale;
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     Toast toast;
     String choice,string;
-   Spinner spinner;
+    Spinner spinner;
     TextToSpeech tts;
     Locale locale ;
     Context context;
@@ -35,22 +36,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),R.array.langs,
-               R.layout.spinner_row);
+                R.layout.spinner_row);
 
         spinner = (Spinner)
                 findViewById(R.id.spinner);
         spinner.setAdapter(adapter);
-        Button button  = (Button) findViewById(R.id.button);
+       // Button button  = (Button) findViewById(R.id.button);
+        final RippleView button = (RippleView) findViewById(R.id.button);
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 if(i!= 0)
 
-                ;
+                    ;
             }
         });
 
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
+       button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -155,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.about_app  :
-               context = getApplicationContext();
+                context = getApplicationContext();
                 mess = "Type it in Editable, select language and get the pronunciation. Make sure your phone has the required language pack in TTS downloaded.\n\n More to follow...";
                 duration = Toast.LENGTH_LONG;
 
@@ -165,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.about_me  :
-               context = getApplicationContext();
+                context = getApplicationContext();
                 mess = "Under Construction, but here is a quote to make your day. \n\n \"If the King doesn't lead, how can he expect his subordinates to follow?\"";
 
                 duration = Toast.LENGTH_LONG;
@@ -198,4 +200,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
