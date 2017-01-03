@@ -12,11 +12,12 @@
 
 ## Screenshots
 
+![](http://imgur.com/OvIGGwz.png) ![](http://imgur.com/A2xPR7T.png) ![](http://imgur.com/R8H1kh0.png) ![](http://imgur.com/X9Lo0YA)
 
 ## Building
 
 ### Using Android Studio
-The easiest way to build is to install Android Studio v2.+ with Gradle v2.10 Once installed, then you can import the project into Android Studio
+The easiest way to build is to install Android Studio v2.+ with Gradle v2.14.1 Once installed, then you can import the project into Android Studio
 
 1.    Open `File`.
 2.    Import Project.
