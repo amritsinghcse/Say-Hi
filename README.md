@@ -6,9 +6,7 @@
 
 - [Screenshots](#screenshots)
 - [Building](#building)
-    * [Using Android Studio](#using android studio)
-    - [Using Gradle](#using gradle)
-- [Contribute](#contributing)
+- [Contributing](#contributing)
 - [License](#license)
 
 
@@ -27,11 +25,6 @@ The easiest way to build is to install Android Studio v2.+ with Gradle v2.10 Onc
 
 Then, Gradle will do everything for you.
 
-### Using Gradle
-This project requires the Android `SDK` to be installed in your development environment. In addition you'll need to set the `ANDROID_HOME` environment variable to the location of your `SDK`. For example:
-
-`export ANDROID_HOME=/home/<user>/tools/android-sdk`
-
 ## Contributing
 
 1. Fork and clone the project.
@@ -39,4 +32,4 @@ This project requires the Android `SDK` to be installed in your development envi
 3. Make changes and submit a pull request.
 
 ## License
-
+[MIT](../blob/master/LICENSE)
