@@ -12,7 +12,7 @@
 
 ## Screenshots
 
-![](http://imgur.com/OvIGGwz.png) ![](http://imgur.com/A2xPR7T.png) ![](http://imgur.com/R8H1kh0.png) ![](http://imgur.com/X9Lo0YA)
+![](http://imgur.com/OvIGGwz.png) ![](http://imgur.com/A2xPR7T.png) ![](http://imgur.com/R8H1kh0.png) ![](http://imgur.com/X9Lo0YA.png)
 
 ## Building
 
