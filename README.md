@@ -4,11 +4,11 @@
 
 ## Table of contents
 
-- [Screenshots](#Screenshots)
+- [Screenshots](#screenshots)
 - [Building](#building)
-    * [Using Android Studio](#usingandroidstudio)
-    - [Using Gradle](#usinggradle)
-- [Contribute](#contribute)
+    * [Using Android Studio](#using android studio)
+    - [Using Gradle](#using gradle)
+- [Contribute](#contributing)
 - [License](#license)
 
 
