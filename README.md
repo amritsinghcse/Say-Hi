@@ -33,4 +33,4 @@ Then, Gradle will do everything for you.
 3. Make changes and submit a pull request.
 
 ## License
-[MIT](../blob/master/LICENSE)
+[MIT](../master/LICENSE)
