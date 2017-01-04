@@ -238,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.about_app:
                 context = getApplicationContext();
-                mess = "Type it in Editable, select language and get the pronunciation. Make sure your phone has the required language pack in TTS downloaded.\n\n More to follow...";
+                mess = "Type it in Editable, select language and get the pronunciation. Make sure your phone supports the required language.";
                 duration = Toast.LENGTH_LONG;
 
 
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.about_me:
                 context = getApplicationContext();
-                mess = "Under Construction, but here is a quote to make your day. \n\n \"If the King doesn't lead, how can he expect his subordinates to follow?\"";
+                mess = "Under Construction";
                 duration = Toast.LENGTH_LONG;
                 toast = Toast.makeText(context, mess, duration);
                 toast.show();

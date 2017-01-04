@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="monospace"
-            android:text="SAY IT!"
+            android:text="@string/sayit"
             android:background="@android:color/holo_red_dark"
             android:textColor="#fff"
             android:textSize="14sp"
@@ -60,7 +60,7 @@
             android:layout_marginTop="15dp"
             android:fontFamily="casual"
             android:gravity="center_horizontal"
-            android:text="Write it up!\nAnd don't forget to give feedback and report bugs"
+            android:text="@string/textHint"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </LinearLayout>
