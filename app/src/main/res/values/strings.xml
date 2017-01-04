@@ -8,6 +8,38 @@
         <item>Spanish</item>
         <item>Chinese</item>
         <item>German</item>
+        <item>Italian</item>
+        <item>Dutch</item>
+        <item>Korean</item>
+        <item>Polish</item>
+        <item>Russian</item>
+        <item>Arabic</item>
+        <item>Bulgarian</item>
+        <item>Catalan</item>
+        <item>Croatian</item>
+        <item>Danish</item>
+        <item>Finnish</item>
+        <item>Greek</item>
+        <item>Hebrew</item>
+        <item>Hindi</item>
+        <item>Indonesian</item>
+        <item>Latvian</item>
+        <item>Hungarian</item>
+        <item>Norwegian</item>
+        <item>Lithuanian</item>
+        <item>Portuguese</item>
+        <item>Romanian</item>
+        <item>Serbian</item>
+        <item>Slovak</item>
+        <item>Slovenian</item>
+        <item>Swedish</item>
+        <item>Tagalog</item>
+        <item>Thai</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Vietnamese</item>
+
+
     </string-array>
 
 </resources>

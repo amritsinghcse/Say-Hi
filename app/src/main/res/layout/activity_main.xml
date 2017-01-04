@@ -44,9 +44,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="monospace"
-            android:text="Say it!"
+            android:text="SAY IT!"
             android:background="@android:color/holo_red_dark"
             android:textColor="#fff"
+            android:textSize="14sp"
+
             />
 
         </com.andexert.library.RippleView>
