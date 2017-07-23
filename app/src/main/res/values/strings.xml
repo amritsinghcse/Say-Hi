@@ -43,6 +43,6 @@
     </string-array>
 
     <string name="sayit">SAY IT!</string>
-    <string name="textHint">Write it up!\nAnd don't forget to give feedback and report bugs</string>
+    <string name="textHint">Write it up!\nAnd don\'t forget to give feedback and report bugs</string>
 
 </resources>
